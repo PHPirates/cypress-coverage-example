@@ -9,16 +9,20 @@
     "Explorer >= 11",
     "not op_mini all"
   ],
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.2",
     "@babel/preset-env": "^7.0.0-rc.2",
-    "babel-loader": "^8.0.0-beta.6",
+    "babel-loader": "^8.0.5",
     "babel-plugin-istanbul": "^4.1.6",
     "cross-env": "^5.2.0",
     "cypress": "^3.1.0",
     "istanbul-lib-coverage": "^1.2.0",
     "nyc": "^12.0.2",
-    "webpack": "^4.17.1",
     "webpack-command": "^0.4.1"
   },
   "nyc": {
@@ -26,6 +30,7 @@
     "report-dir": "./coverage"
   },
   "scripts": {
+    "start": "react-scripts start",
     "build": "webpack --config ./webpack.config.js",
     "coverage": "npm run-script coverage:build && cypress run --env coverage=true && npm run-script coverage:report",
     "coverage:build": "cross-env NODE_ENV=test npm run-script build",

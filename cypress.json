@@ -1,5 +1,5 @@
 {
   "coverageFolder": "coverage",
-  "fileServerFolder": "dist",
+  "fileServerFolder": "public",
   "video": false
 }
